@@ -1,0 +1,20 @@
+#################################################################################################
+##	freeCodeCamp.org: MERN Stack Tutorial - Book Store Project
+##	https://www.youtube.com/watch?v=-42K44A1oMA
+##  MongoDB + Express + React + NodeJS 
+#################################################################################################
+
+Backend/Server  [https://youtu.be/-42K44A1oMA?t=101]
+
+$ npm init -y 
+
+> package.json > + "type": "module",
+
+$ npm i express nodemon mongoose cors
+
+
+http://localhost:5555/
+
+
+
+FrontEnd/Client [https://youtu.be/-42K44A1oMA?t=1530]
