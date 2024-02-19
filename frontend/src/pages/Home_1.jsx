@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Spinner from '../components/Spinner';
 import { Link } from 'react-router-dom';
-// import { AiOutLineEdit } from 'react-icons/ai';
+import { AiOutlineEdit } from 'react-icons/ai';
 import { BsInfoCircle } from 'react-icons/bs';
 import { MdOutlineAddBox, MdOutlineEdit, MdOutlineDelete } from 'react-icons/md';
 
@@ -13,7 +13,7 @@ const Home = () => {
     useEffect( () => {
         setLoading(true);
         axios
-        .get('http://localhost:5555/books')
+        .get(process.env.APP_SERVER)//.get('http://localhost:5555/books')
         .then( (response) =>{
             setBooks(response.data.data);
             setLoading(false);
@@ -67,7 +67,7 @@ const Home = () => {
                                             <BsInfoCircle className='text-2x1 text-green-800' />
                                         </Link>
                                         <Link to={`/books/edit/${book._id}`}>
-                                            <MdOutlineEdit className='text-2x1 text-yellow-600' />
+                                            <AiOutlineEdit className='text-2x1 text-yellow-600' />
                                         </Link>
                                         <Link to={`/books/delete/${book._id}`}>
                                             <MdOutlineDelete className='text-2x1 text-red-600' />

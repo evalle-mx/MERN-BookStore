@@ -14,7 +14,7 @@ const DeleteBook = () => {
   const handleDeleteBook = () => {
     setLoading(true);
     axios
-    .delete(`http://localhost:5555/books/${id}`)
+    .delete(process.env.APP_SERVER+id)//.delete(`http://localhost:5555/books/${id}`)
     .then( (resp) =>{      
       // console.log(resp); alert('pause');
       enqueueSnackbar('Book Deleted Successfully', {variant:'success'});

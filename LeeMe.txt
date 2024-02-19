@@ -1,8 +1,8 @@
 #################################################################################################
 ##	freeCodeCamp.org: MERN Stack Tutorial - Book Store Project
 ##	https://www.youtube.com/watch?v=-42K44A1oMA
-##  MongoDB + Express + React + NodeJS 
-##  *Vite, TailWIndCss, 
+##  MongoDB + Express + React + NodeJS (dotenv)
+##  *Vite, TailWIndCss, notistack
 #################################################################################################
 
 Backend/Server  [https://youtu.be/-42K44A1oMA?t=101]
@@ -41,3 +41,16 @@ $ npm i axios react-icons
 
 
 $ npm install notistack
+
+
+
+
+
+
+
+
+
+
+
+//Using env into VITE : https://dev.to/boostup/uncaught-referenceerror-process-is-not-defined-12kg
+export const ATLAS_URL = 'mongodb+srv://<USERNAME>:<PASS>@<CLUSTER.NAME>.mongodb.net/<D>?retryWrites=true&w=majority';

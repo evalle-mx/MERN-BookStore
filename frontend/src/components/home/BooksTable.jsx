@@ -1,8 +1,8 @@
 //import React from 'react'
 import { Link } from 'react-router-dom';
-// import { AiOutLineEdit } from 'react-icons/ai';
+import { AiOutlineEdit } from 'react-icons/ai';
 import { BsInfoCircle } from 'react-icons/bs';
-import { MdOutlineAddBox, MdOutlineEdit, MdOutlineDelete } from 'react-icons/md';
+import { MdOutlineDelete } from 'react-icons/md';
 
 const BooksTable = ({ books }) => {
   return (
@@ -38,7 +38,7 @@ const BooksTable = ({ books }) => {
                                             <BsInfoCircle className='text-2x1 text-green-800' />
                                         </Link>
                                         <Link to={`/books/edit/${book._id}`}>
-                                            <MdOutlineEdit className='text-2x1 text-yellow-600' />
+                                            <AiOutlineEdit className='text-2x1 text-yellow-600' />
                                         </Link>
                                         <Link to={`/books/delete/${book._id}`}>
                                             <MdOutlineDelete className='text-2x1 text-red-600' />

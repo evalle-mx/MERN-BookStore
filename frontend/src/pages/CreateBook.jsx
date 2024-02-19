@@ -20,7 +20,7 @@ const CreateBook = () => {
     };
     setLoading(true);
     axios
-    .post(`http://localhost:5555/books/`, data)
+    .post(process.env.APP_SERVER, data) //.post(`http://localhost:5555/books/`, data)
     .then( (resp) =>{      
       //console.log(resp); alert('pause');
       setLoading(false)

@@ -19,7 +19,7 @@ const EditBook = () => {
   useEffect( () => {
     setLoading(true);
     axios
-    .get(`http://localhost:5555/books/${id}`)
+    .get(process.env.APP_SERVER+id)//.get(`http://localhost:5555/books/${id}`)
     .then((response) => {
       console.log(response);
       setTitle(response.data.book.title);
@@ -41,7 +41,7 @@ const EditBook = () => {
     };
     setLoading(true);
     axios
-    .put(`http://localhost:5555/books/${id}`, data)
+    .put(process.env.APP_SERVER+id, data) //.put(`http://localhost:5555/books/${id}`, data)
     .then( (resp) =>{      
       //console.log(resp); alert('pause');
       setLoading(false);

@@ -1,15 +1,15 @@
 //import React from 'react'
 import { Link } from "react-router-dom";
-// import { PiBookOpenTextLight } from "react-icons/bi";
+import { PiBookOpenTextLight } from "react-icons/pi";
 import { BiShow, BiUserCircle } from "react-icons/bi";
-// import { AiOutLineEdit } from "react-icons/ai";
+import { AiOutlineEdit } from 'react-icons/ai';
 import { BsInfoCircle } from "react-icons/bs";
-import { MdOutlineDelete, MdOutlineEdit } from "react-icons/md"; //Temp replace for AiOutLineEdit
+import { MdOutlineDelete } from "react-icons/md";
 
 import { useState } from "react";
 import BookModal from "./BookModal";
 
-import { BsBook } from "react-icons/bs";  //Temp replace for BsBook
+// import { BsBook } from "react-icons/bs";  //Temp replace for PiBookOpenTextLight
 
 
 const BookSingleCard = ({book}) => {
@@ -21,7 +21,7 @@ const BookSingleCard = ({book}) => {
           </h2>
           <h4 className="my-2 text-gray-500">{book._id}</h4>
           <div className="flex justify-start items-center gap-x-2">
-            <BsBook className="text-red-300 text-2x1" />
+            <PiBookOpenTextLight className="text-red-300 text-2x1" />
             <h2 className="my-1">{book.title}</h2>
           </div>
           <div className="flex justify-start items-center gap-x-2">
@@ -35,7 +35,7 @@ const BookSingleCard = ({book}) => {
               <BsInfoCircle className="text-2x1 text-green-800 hover:text-black" />
             </Link>
             <Link to={`/books/edit/${book._id}`}>
-              <MdOutlineEdit className="text-2x1 text-yellow-600 hover:text-black" />
+              <AiOutlineEdit className="text-2x1 text-yellow-600 hover:text-black" />
             </Link>
             <Link to={`/books/delete/${book._id}`}>
               <MdOutlineDelete className="text-2x1 text-red-600 hover:text-black" />

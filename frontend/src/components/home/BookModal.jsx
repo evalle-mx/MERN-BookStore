@@ -1,9 +1,8 @@
 //import React from 'react'
 
-// import { PiBookOpenTextLight } from "react-icons/bi";
-// import { AiOutLineClose } from "react-icons/ai";
+import { PiBookOpenTextLight } from "react-icons/pi";
+import { AiOutlineClose } from "react-icons/ai";
 import { BiUserCircle } from "react-icons/bi";
-import { BsXLg, BsBook } from "react-icons/bs";
 
 const BookModal = ({ book, onClose }) => {
   return (
@@ -15,7 +14,7 @@ const BookModal = ({ book, onClose }) => {
         onClick={(event) => event.stopPropagation()}
         className="w-[600px] max-w-full g-[400px] bg-white rounded-x1 p-4 flex flex-col relative"
       >
-        <BsXLg
+        <AiOutlineClose
           className="absolute right-6 top-6 text-3x1 text-red-600 cursor-pointer"
           onClick={onClose}
         />
@@ -24,7 +23,7 @@ const BookModal = ({ book, onClose }) => {
         </h2>
         <h4 className="my-2 text-gray-500">{book._id}</h4>
         <div className="flex justify-start items-center gap-x-2">
-            <BsBook className="text-red-300 text-2x1"/>
+            <PiBookOpenTextLight className="text-red-300 text-2x1"/>
           <h2 className="my-1">{book.title}</h2>
         </div>
         <div className="flex justify-start items-center gap-x-2">

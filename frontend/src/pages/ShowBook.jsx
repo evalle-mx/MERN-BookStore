@@ -14,9 +14,9 @@ const ShowBook = () => {
   useEffect( () => {
     setLoading(true);
     axios
-    .get(`http://localhost:5555/books/${id}`)
+    .get(process.env.APP_SERVER+id) //.get(`http://localhost:5555/books/${id}`)
     .then((response) => {
-      console.log(response.data.book);
+      //console.log(response);  //.data.book
       setBook(response.data.book);
       setLoading(false);
     })
