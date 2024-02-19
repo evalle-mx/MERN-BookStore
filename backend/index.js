@@ -12,15 +12,15 @@ const app = express();
 app.use( express.json() );
 //Middleware fr handling CORS policy
 // option 1)  Allow all origins with Default of cors (*)
-// app.use(cors())
+app.use(cors())
 // option 2) Allow Custom Origins
-app.use(
-    cors({
-        origin: CORS_ORIGIN_REACT,
-        methods:['GET', 'POST', 'PUT', 'DELETE'],
-        allowedHeaders: ['Content-Type'],
-    })
-)
+// app.use(
+//     cors({
+//         origin: CORS_ORIGIN_REACT,
+//         methods:['GET', 'POST', 'PUT', 'DELETE'],
+//         allowedHeaders: ['Content-Type'],
+//     })
+// )
 
 app.get('', (req, res)=> {
     res.status(234).send('Welcome')

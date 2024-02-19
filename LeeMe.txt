@@ -2,6 +2,7 @@
 ##	freeCodeCamp.org: MERN Stack Tutorial - Book Store Project
 ##	https://www.youtube.com/watch?v=-42K44A1oMA
 ##  MongoDB + Express + React + NodeJS 
+##  *Vite, TailWIndCss, 
 #################################################################################################
 
 Backend/Server  [https://youtu.be/-42K44A1oMA?t=101]
@@ -18,3 +19,17 @@ http://localhost:5555/
 
 
 FrontEnd/Client [https://youtu.be/-42K44A1oMA?t=1530]
+
+$ npm create vite@latest
+  y, frontend, React, Javascript
+
+> Add Css to proyect (tailwindcss)[https://tailwindcss.com/docs/guides/vite]
+
+$ npm install -D tailwindcss postcss autoprefixer
+$ npx tailwindcss init -p
+
+
+$ npm i react-router-dom
+
+# https://react-icons.github.io/react-icons/icons/md/
+$ npm i axios react-icons

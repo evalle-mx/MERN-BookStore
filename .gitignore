@@ -9,6 +9,9 @@
 config.env
 leeMe.txt
 
+# Properties
+/backend/properties/config.js
+
 # production
 /build
 
