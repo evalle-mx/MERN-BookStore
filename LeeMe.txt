@@ -33,3 +33,11 @@ $ npm i react-router-dom
 
 # https://react-icons.github.io/react-icons/icons/md/
 $ npm i axios react-icons
+
+
+
+# Beautiful alerts using notistack [https://www.npmjs.com/package/notistack]
+# https://youtu.be/-42K44A1oMA?t=3489
+
+
+$ npm install notistack

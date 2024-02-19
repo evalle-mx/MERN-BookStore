@@ -4,6 +4,7 @@ import axios from 'axios';
 import BackButton from '../components/BackButton';
 import Spinner from '../components/Spinner';
 
+import { useSnackbar } from 'notistack';
 
 const EditBook = () => {
   const [title, setTitle] = useState('');
@@ -11,6 +12,7 @@ const EditBook = () => {
   const [publishYear, setPublishYear] = useState('');
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const { enqueueSnackbar } = useSnackbar();
 
   const { id } = useParams();
 
@@ -27,7 +29,8 @@ const EditBook = () => {
     })
     .catch( (e) => {
       console.log(e); 
-      alert('An error ocurred, Phease check console');
+      //alert('An error ocurred, Phease check console');
+      enqueueSnackbar('An Error Ocurred', {variant:'error'});
       setLoading(false);
     })
   }, []);
@@ -41,12 +44,14 @@ const EditBook = () => {
     .put(`http://localhost:5555/books/${id}`, data)
     .then( (resp) =>{      
       //console.log(resp); alert('pause');
-      setLoading(false)
+      setLoading(false);
+      enqueueSnackbar('Book Updated Successfully', {variant:'success'});
       navigate('/');
     })
     .catch( (e) => {
       console.log(e);
-      alert('An error ocurred, Phease check console');
+      //alert('An error ocurred, Phease check console');
+      enqueueSnackbar('An Error Ocurred', {variant:'error'});
       setLoading(false);
     })
   }
